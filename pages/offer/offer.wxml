@@ -1,0 +1,48 @@
+
+<!--offer.wxml-->
+<view class="section">
+  <input placeholder="输入厂商，普洱名称等关键词" bindfocus="toSearch" />
+  <icon type="search" class="search" size="20" />
+</view>
+<view class="select-wrap">
+  <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+    <view class="picker">
+      {{array1[index1]}}
+    </view>
+  </picker>
+  <picker disabled="{{isDisabled}}" bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+    <view class="picker {{disabledClass}}">
+      {{array2[index2]}}
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+    <view class="picker">
+      {{array3[index3]}}
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange4" value="{{index4}}" range="{{array4}}">
+    <view class="picker">
+      {{array4[index4]}}
+    </view>
+  </picker>
+</view>
+<scroll-view scroll-y="true" style="height: {{height}};" enable-back-to-top="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="list-item" wx:for="{{commodityList}}">
+    <navigator class="swiper-link clearfix" url="../offerDetail/offerDetail?commodity={{item.commodityId}}">
+      <view class="item-img">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="item-title">
+        <view class="title">{{item.title}}</view>
+        <view class="item-type">
+          <text>{{item.type}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view class="item-info">
+          <text class="item-value">{{item.value}}/饼</text>
+          <text class="item-company">{{item.company}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>

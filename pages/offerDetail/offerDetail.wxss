@@ -1,0 +1,226 @@
+.img image{
+    width: 100%;
+    height: 600rpx;
+}
+.info{
+    padding:20rpx 30rpx;
+    background:#fff;
+    border-bottom:2rpx solid #ccc;
+}
+.name{
+    margin-bottom:20rpx;
+    font-size:14pt;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60rpx;
+}
+.red{
+    color:#f50a4c;
+}
+.item{
+    width: 40%;
+    font-size:9pt;
+}
+.item-first{
+    width:60%;
+}
+.user-item{
+    height: 60rpx;
+    padding:0 20rpx;
+    margin-top:10rpx;
+    font-size:11pt;
+    line-height: 60rpx;
+    background-color:#fff;
+    border-bottom:2rpx solid #ccc;
+    border-top:2rpx solid #ccc;
+}
+.user-item view{
+    width: 100%;
+    line-height: 56rpx; 
+    background-image:url(../../images/icon-arrow-right.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size:30rpx;
+}
+.section-title{
+    padding:30rpx;
+    font-size:14pt;
+    text-align: center;
+}
+.comment-wrap{
+    padding:20rpx;
+    background:#fff;
+    border-top:2rpx solid #ccc;
+    border-bottom:2rpx solid #ccc;
+}
+.comment-text{
+    font-size:13pt;
+    line-height: 1.5;
+    text-indent: 40rpx;
+}
+.score{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20rpx;
+    border-top:2rpx solid #ccc;
+    font-size:9pt;
+}
+.list-item{
+  background:#fff;
+  border-bottom: 2rpx solid #ccc;
+}
+.swiper-link{
+  display: block;
+  padding:0 30rpx 0 0;
+  box-sizing: border-box;
+}
+.item-img{
+  float: left;
+  height: 180rpx;
+}
+.item-img image{
+  width: 180rpx;
+  height:180rpx;
+}
+.item-title{
+  float: left;
+  width: 510rpx;
+  padding:16rpx 0;
+  margin-left:20rpx;
+}
+.title{
+  display: -webkit-box;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  word-break: break-all;  
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp:2;
+  height: 84rpx;
+  font-size:11pt;
+  line-height: 42rpx;
+}
+.item-type{
+  margin-top:14rpx;
+  color:#999;
+  font-size:9pt;
+}
+.item-type text{
+  margin-right:20rpx;
+}
+.item-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:16rpx;
+}
+.item-value{
+  color:#cc0000;
+  font-size:9pt;
+}
+.item-company{
+  color:#999;
+  font-size:9pt;
+}
+.fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 20rpx;
+background: rgb(248,248,248);
+border-top:2rpx solid #ccc;
+z-index: 10;
+box-sizing: border-box; 
+}
+.fixed button{
+    width: 45%;
+    height: 60rpx;
+    padding:0;
+    margin:0;
+    font-size: 9pt;
+    line-height: 60rpx;
+}
+scroll-view{
+    padding-bottom:80rpx;
+}
+.page-cover{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+}
+.pop-title{
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+}
+.pop-wrap{
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    background: #fff;
+}
+.slider-wrap{
+    padding:20rpx;
+    color:#cc0000;
+    font-size:11pt;
+    text-align: center;
+    border-top:2rpx solid #ccc;
+    border-bottom:2rpx solid #ccc;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding:20rpx 30rpx;
+    background: #fff;
+    border-bottom:2rpx solid #ccc;
+}
+label{
+    width: 160rpx;
+    height: 60rpx;
+    font-size:11pt;
+    line-height: 60rpx;
+}
+input{
+    height: 60rpx;
+    padding:0 20rpx;
+    font-size:13pt;
+    border:2rpx solid #ccc;
+    border-radius:8rpx;
+}
+textarea{
+    width: 400rpx;
+    height: 160rpx;
+    padding:20rpx;
+    font-size: 13pt;
+    line-height: 1.2;
+    border:2rpx solid #ccc;
+    border-radius:8rpx;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    padding:10rpx 20rpx;
+    border-top:2rpx solid #ccc;
+}
+.btn button{
+    width: 45%;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.tip{
+    padding:30rpx 20rpx;
+    font-size:10pt;
+    line-height: 1.5;
+}

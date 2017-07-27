@@ -1,0 +1,35 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding:20rpx 30rpx;
+    background: #fff;
+    border-bottom:2rpx solid #ccc;
+}
+label{
+    width: 160rpx;
+    height: 60rpx;
+    font-size:13pt;
+    line-height: 60rpx;
+}
+input{
+    height: 60rpx;
+    padding:0 20rpx;
+    font-size:13pt;
+    border:2rpx solid #ccc;
+    border-radius:8rpx;
+}
+textarea{
+    height: 160rpx;
+    padding:20rpx;
+    font-size: 13pt;
+    line-height: 1.2;
+    border:2rpx solid #ccc;
+    border-radius:8rpx;
+}
+.btn{
+    padding:30rpx;
+}
+button{
+    margin-top:30rpx;
+}

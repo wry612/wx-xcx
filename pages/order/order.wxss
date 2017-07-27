@@ -1,0 +1,56 @@
+.list-item{
+  background:#fff;
+  border-bottom: 2rpx solid #ccc;
+}
+.swiper-link{
+  display: block;
+  padding:0 30rpx 0 0;
+  box-sizing: border-box;
+}
+.item-img{
+  float: left;
+  height: 180rpx;
+}
+.item-img image{
+  width: 180rpx;
+  height:180rpx;
+}
+.item-title{
+  float: left;
+  width: 510rpx;
+  padding:16rpx 0;
+  margin-left:20rpx;
+}
+.title{
+  display: -webkit-box;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  word-break: break-all;  
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp:2;
+  height: 84rpx;
+  font-size:11pt;
+  line-height: 42rpx;
+}
+.item-type{
+  margin-top:14rpx;
+  color:#999;
+  font-size:9pt;
+}
+.item-type text{
+  margin-right:20rpx;
+}
+.item-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:16rpx;
+}
+.item-value{
+  color:#cc0000;
+  font-size:9pt;
+}
+.item-company{
+  color:#999;
+  font-size:9pt;
+}

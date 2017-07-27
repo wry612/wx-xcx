@@ -1,0 +1,16 @@
+<view class="section">
+  <input placeholder="输入厂商，普洱名称等关键词" type="text" auto-focus maxlength="20" confirm-type="搜索" bindconfirm="toSearch" />
+  <icon type="search" class="search" size="20" />
+</view>
+<view class="search-section">
+  <view class="title">搜索历史</view>
+  <view class="search-item">
+    <button wx:for="{{historyList}}" wx:key="item" id="{{item}}" bindtap="search">{{item}}</button>
+  </view>
+</view>
+<view class="search-section">
+  <view class="title">热门搜索</view>
+  <view class="search-item">
+    <button wx:for="{{hotList}}" wx:key="item" id="{{item}}" bindtap="search">{{item}}</button>
+  </view>
+</view>

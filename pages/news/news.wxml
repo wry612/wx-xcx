@@ -1,0 +1,56 @@
+<scroll-view scroll-y="true" style="height: {{height}};" enable-back-to-top="true" bindscrolltolower="lower">
+  <view class="news-wrap">
+    <view class="title">
+      {{news.title}}
+    </view>
+    <view class="info">
+      <view>茶言观色{{news.time}}</view>
+      <view class="praise">
+        <image src="../../images/icon-praise.png"></image>
+        {{news.praise}}
+      </view>
+    </view>
+    <view class="content">
+      <block wx:for="{{news.content}}">
+        <view class="text" wx:if="{{item.type==1}}">
+          {{item.detail}}</view>
+        <view wx:elif="{{item.type==2}}">
+          <image src="{{item.detail}}"></image>
+        </view>
+        <view wx:else>
+          <video src="{{item.detail}}"></video>
+        </view>
+      </block>
+      <view class="btn-praise" bindtap="praise">
+        <image src="../../images/praise.png"></image>
+        <view>赞</view>
+      </view>
+    </view>
+  </view>
+  <view class="guest-book">
+    <view class="book-title">用户留言</view>
+    <view class="book-item" wx:for="{{bookList}}">
+      <view class="book-info">
+        <view class="book-name">
+          <image src="{{item.headImg}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="book-time">{{item.time}}</view>
+      </view>
+      <view class="book-text">{{item.text}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="book-box" hidden="{{!isShow}}">
+  <input type="text" placeholder="说点什么" bindfocus="showTextarea" focus="{{focus}}" />
+</view>
+<view class="page-cover" hidden="{{isShow}}">
+  <view class="pop-text">
+    <view class="text-btn">
+      <button type="default" size="mini" bindtap="cancel">取消</button>
+      <text>写评论</text>
+      <button type="primary" size="mini" bindtap="sendMessage">发送</button>
+    </view>
+    <textarea placeholder="写点什么……" focus="{{isFocus}}" bindinput="getText" />
+  </view>
+</view>

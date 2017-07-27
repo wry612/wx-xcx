@@ -1,0 +1,105 @@
+/**offer.wxss**/
+.section {
+  position: relative;
+  padding: 20rpx 30rpx;
+  background: transparent;
+  border-bottom:2rpx solid #ccc;
+}
+.section input {
+  width: 100%;
+  height: 60rpx;
+  padding: 0 20rpx;
+  font-size:11pt;
+  background: #fff;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.search{
+  position: absolute;
+  right:50rpx;
+  top:28rpx;
+  z-index: 1;
+}
+.select-wrap{
+  display: flex;
+  justify-content: space-between;
+    padding:10rpx 30rpx;
+    background: #fff;
+    border-bottom:2rpx solid #ccc;
+}
+.select-wrap .picker{
+    width: 150rpx;
+    height: 60rpx;
+    padding-right:20rpx;
+    font-size: 9pt;
+    text-align: center;
+    line-height: 60rpx;
+    border:2rpx solid #ccc;
+    border-radius:8rpx;
+    background: url(../../images/icon-arrow-down.png) no-repeat;
+    background-position: 120rpx 20rpx;
+    background-size:20rpx 20rpx;
+}
+.select-wrap .picker.disabled{
+  color:#ccc;
+  background: url(../../images/icon-arrow-down-disabled.png) no-repeat;
+    background-position: 115rpx 20rpx;
+    background-size:20rpx 20rpx;
+}
+.list-item{
+  background:#fff;
+  border-bottom: 2rpx solid #ccc;
+}
+.swiper-link{
+  display: block;
+  padding:0 30rpx 0 0;
+  box-sizing: border-box;
+}
+.item-img{
+  float: left;
+  height: 180rpx;
+}
+.item-img image{
+  width: 180rpx;
+  height:180rpx;
+}
+.item-title{
+  float: left;
+  width: 510rpx;
+  padding:16rpx 0;
+  margin-left:20rpx;
+}
+.title{
+  display: -webkit-box;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  word-break: break-all;  
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp:2;
+  height: 84rpx;
+  font-size:11pt;
+  line-height: 42rpx;
+}
+.item-type{
+  margin-top:14rpx;
+  color:#999;
+  font-size:9pt;
+}
+.item-type text{
+  margin-right:20rpx;
+}
+.item-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:10rpx;
+}
+.item-value{
+  color:#cc0000;
+  font-size:11pt;
+}
+.item-company{
+  color:#999;
+  font-size:9pt;
+}

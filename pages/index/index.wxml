@@ -1,0 +1,69 @@
+
+<!--index.wxml-->
+<scroll-view scroll-y="true" style="height: {{height}};" enable-back-to-top="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="news-banner">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+      <block wx:for="{{swiperNewsList}}">
+        <swiper-item>
+          <navigator url="../../news/news?newsId={{item.newsId}}">
+            <image src="{{item.img}}" class="slide-image" />
+            <view class="swiper-title">
+              <text>{{item.title}}</text>
+            </view>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="news-wrap">
+    <block wx:for="{{newsList}}">
+      <view wx:if="{{item.type==1}}" class="news-item">
+        <navigator class="swiper-link clearfix" url="../news/news?newsId={{item.newsId}}">
+          <view class="item-img">
+            <image src="{{item.img}}"></image>
+          </view>
+          <view class="item-title">
+            <view class="title">{{item.title}}</view>
+            <view class="item-comment">
+              <text>{{item.comment}}</text>
+              <image src="../../images/icon-comment.png"></image>
+              <text>{{item.praise}}</text>
+              <image src="../../images/icon-praise.png"></image>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class="news-video" wx:elif="{{item.type==2}}">
+        <navigator url="../news/news?newsId={{item.newsId}}">
+          <image src="{{item.img}}"></image>
+          <view class="video-cover">
+            <view class="video-title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="video-img">
+              <image src="../../images/icon-play.png"></image>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view wx:else class="news-img">
+        <navigator class="swiper-link clearfix" url="../news/news?newsId={{item.newsId}}">
+          <view class="img-title">
+            {{item.title}}
+          </view>
+          <view class="img-list">
+            <image src="{{item.imgList[0]}}"></image>
+            <image src="{{item.imgList[1]}}"></image>
+            <image src="{{item.imgList[2]}}"></image>
+          </view>
+          <view class="item-comment mt24">
+            <text>{{item.comment}}</text>
+            <image src="../../images/icon-comment.png"></image>
+            <text>{{item.praise}}</text>
+            <image src="../../images/icon-praise.png"></image>
+          </view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</scroll-view>

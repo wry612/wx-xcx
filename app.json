@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/search",
+    "pages/offer/offer",
+    "pages/user/user",
+    "pages/news/news",
+    "pages/address/address",
+    "pages/order/order",
+    "pages/offerDetail/offerDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "普洱茶言观色",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#eee"
+  },
+  "tabBar":{
+    "color":"#000",
+    "selectedColor":"#09bb07",
+    "backgroundColor":"#fff",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"茶言观色",
+      "iconPath":"images/icon-index.png",
+      "selectedIconPath":"images/icon-index-select.png"
+    },{
+      "pagePath":"pages/offer/offer",
+      "text":"普洱报价",
+      "iconPath":"images/icon-offer.png",
+      "selectedIconPath":"images/icon-offer-select.png"
+    },{
+      "pagePath":"pages/user/user",
+      "text":"个人中心",
+      "iconPath":"images/icon-user.png",
+      "selectedIconPath":"images/icon-user-select.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug":true
+}

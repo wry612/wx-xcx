@@ -1,0 +1,18 @@
+<scroll-view scroll-y="true" class="bt" style="height: {{height}};" enable-back-to-top="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="list-item clearfix" wx:for="{{orderList}}">
+      <view class="item-img">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="item-title">
+        <view class="title">{{item.title}}</view>
+        <view class="item-type">
+          <text>{{item.type}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view class="item-info">
+          <text class="item-value">数量：{{item.num}}</text>
+          <text class="item-company">{{item.state}}</text>
+        </view>
+      </view>
+  </view>
+</scroll-view>

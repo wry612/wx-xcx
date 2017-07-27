@@ -1,0 +1,15 @@
+
+<!--user.wxml-->
+<view class="user-item border-top">
+  <navigator url="../address/address">收件信息</navigator>
+</view>
+<view class="user-item flex">
+  <view>我的积分</view>
+  <view>
+    <text class="tip">分享急回复内容可以获得积分</text>
+    <text class="number">{{number}}</text>
+  </view>
+</view>
+<view class="user-item">
+  <navigator url="../order/order">兑换订单</navigator>
+</view>

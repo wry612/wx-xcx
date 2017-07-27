@@ -1,0 +1,101 @@
+<scroll-view scroll-y="true" style="height: {{height}};" enable-back-to-top="true" bindscrolltoupper="upper" bindscrolltolower="lower">
+  <view class="img">
+    <image src="{{commodity.img}}"></image>
+  </view>
+  <view class="info">
+    <view class="name">{{commodity.name}}</view>
+    <view class="detail red">
+      <view class="item item-first">
+        ￥{{commodity.value}}</view>
+      <view class="item">批发价：{{commodity.tradePrice}}</view>
+    </view>
+    <view class="detail">
+      <view class="item item-first">厂商：{{commodity.Manufacturer}}</view>
+      <view class="item">品牌：{{commodity.brand}}</view>
+    </view>
+    <view class="detail">
+      <view class="item item-first">工艺：{{commodity.technology}}</view>
+      <view class="item">产区：{{commodity.area}}</view>
+    </view>
+    <view class="detail">
+      <view class="item item-first">规格：{{commodity.specifications}}</view>
+      <view class="item">生产时间：{{commodity.time}}</view>
+    </view>
+  </view>
+  <view class="user-item" bindtap="showHistory">
+    <view>历史报价</view>
+  </view>
+  <view class="section-title">专家点评</view>
+  <view class="comment-wrap">
+    <view class="comment-text">{{commodity.comment}}</view>
+    <view class="score">
+      <text>干茶{{commodity.score[0]}}</text>
+      <text>汤色{{commodity.score[1]}}</text>
+      <text>香气{{commodity.score[2]}}</text>
+      <text>滋味{{commodity.score[3]}}</text>
+      <text>叶底{{commodity.score[4]}}</text>
+      <text class="red">综合评分{{commodity.score[5]}}</text>
+    </view>
+  </view>
+  <view class="section-title">商家在售</view>
+  <view class="list-item clearfix" wx:for="{{commodityList}}">
+    <view class="item-img">
+      <image src="{{item.img}}"></image>
+    </view>
+    <view class="item-title">
+      <view class="title">{{item.title}}</view>
+      <view class="item-info">
+        <text class="item-company">{{item.company}}</text>
+        <text class="item-value">￥{{item.value}}/饼</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="fixed">
+  <button type="primary" bindtap="showPop1">兑换茶样：{{unitIntegral}}积分</button>
+  <button type="primary" bindtap="showPop2">联系客服购买</button>
+</view>
+<view class="page-cover" hidden="{{isHidden1}}">
+  <view class="pop-wrap">
+    <view class="pop-title">
+      兑换
+      <text class="red">{{commodity.name}}</text>茶样
+    </view>
+    <view class="slider-wrap">
+      <slider bindchange="sliderChange" min="1" max="{{max}}" show-value/>
+      <view>需要积分{{needIntegral}}/当前积分{{userIntegral}}</view>
+    </view>
+    <view class="section clearfix">
+      <label>收件人</label>
+      <input placeholder="请填写姓名" type="text" />
+    </view>
+    <view class="section clearfix">
+      <label>联系电话</label>
+      <input placeholder="请填写电话号码" type="number" />
+    </view>
+    <view class="section clearfix">
+      <label>联系地址</label>
+      <textarea placeholder="请谨慎填写，以免邮寄出错" />
+    </view>
+    <view class="btn">
+      <button type="default" bindtap="cancel">取消</button>
+      <button type="primary" bindtap="formSubmit">兑换</button>
+    </view>
+  </view>
+</view>
+<view class="page-cover" hidden="{{isHidden2}}">
+  <view class="pop-wrap">
+    <view class="pop-title">
+      联系客服购买
+    </view>
+    <view class="section clearfix">
+      <label>联系电话</label>
+      <input placeholder="请填写电话号码" type="number" />
+    </view>
+    <view class="tip">因普洱茶较为贵重切购买数量与价格挂钩，请留下您的联系方式有我们的客服人员主动联系并为您报价。</view>
+    <view class="btn">
+      <button type="default" bindtap="cancel">取消</button>
+      <button type="primary" bindtap="send">发送</button>
+    </view>
+  </view>
+</view>
